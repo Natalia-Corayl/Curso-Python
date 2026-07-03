@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando Jquery ahora</title>
+</head>
+
+<body>
+    <p>Si me clickeas dos veces, desapareceré.</p>
+    <p>¡Yo también!</p>
+    <p>¡Yo también!</p>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("p").dblclick(function () {
+                $(this).hide('slow');
+            });
+
+            $("p").click(function () {
+                $(this).css({
+                    "color": "red",
+                    "font-size": "2em"
+                });
+            });
+
+            $("p").hover(function () {
+                $(this).html("<a href='#'>Me convertí</a>");
+            });
+        });
+
+
+    </script>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/gato1.jpg.png" class="d-block w-100" alt="gato1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/gato2.jpg.jpg" class="d-block w-100" alt="gato2">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/gato2.jpg.jpg" class="d-block w-100" alt="gato3">
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
